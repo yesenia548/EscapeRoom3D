@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;                    //VELOCIDAD DE MOVIMIENTO DEL JUGADOR
 
     [SerializeField] private Transform cameraPivot;         //Donde se encuentra la cámara (para rotarla con el mouse)
-    [SerializeField] private float mouseSensitivity = 2f;
+    [SerializeField] private float mouseSensitivity = 2f;   //Sensibilidad del ratón (para rotar la cámara)
 
     private Rigidbody rb;
     private float pitch;
