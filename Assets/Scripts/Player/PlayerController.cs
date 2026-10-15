@@ -16,6 +16,10 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Interaction key pressed");
+        }
     }
 
     private void Update()
@@ -26,6 +30,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
+        Debug.Log("Movement system active");
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
