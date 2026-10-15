@@ -1,11 +1,11 @@
 using UnityEngine;
 
-// Movimiento (WASD) + mirada con el mouse.
+
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5f;
+    public float speed = 5f;                    //VELOCIDAD DE MOVIMIENTO DEL JUGADOR
 
-    [SerializeField] private Transform cameraPivot;
+    [SerializeField] private Transform cameraPivot;         //Donde se encuentra la cámara (para rotarla con el mouse)
     [SerializeField] private float mouseSensitivity = 2f;
 
     private Rigidbody rb;
@@ -39,8 +39,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Con Rigidbody se mueve por velocidad: así las paredes y la puerta SÍ bloquean.
-        // (transform.Translate teletransporta y puede atravesar colliders delgados.)
-        desiredMove = transform.TransformDirection(movement) * speed;
+        desiredMove = transform.TransformDirection(movement) * speed;           // TransformDirection convierte el vector de movimiento de local a global
     }
 
     private void FixedUpdate()
